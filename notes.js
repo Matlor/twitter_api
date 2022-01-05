@@ -301,4 +301,13 @@ test();
 
 
 ERROR API: error.response.data.errors
+
+
+
+
+- include as many user.fields as possible
+- as many tweet fiels as possible
+1) set for as much data as possible -> search done
+1.1) delete all the data I have now in the files
+1.2) check if lookups cost api credits
 */

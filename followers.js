@@ -3,7 +3,8 @@ const fs = require("fs");
 require("dotenv").config();
 const axios = require("axios");
 const bearer_token = process.env.BEARER_TOKEN;
-const endpointURL = "https://api.twitter.com/1.1/followers/ids.json";
+const endpointURL =
+	"https://api.twitter.com/2/users/1075900190178111488/followers";
 
 // axios POST request
 const options = {
@@ -12,14 +13,6 @@ const options = {
 	headers: {
 		"User-Agent": "test",
 		authorization: `Bearer ${bearer_token}`,
-	},
-	params: {
-		ids: "1429067770940084233",
-		/* query: "#icp -is:retweet -is:reply -is:quote",
-		"tweet.fields":
-			"author_id,attachments,context_annotations,conversation_id,created_at,entities,geo,in_reply_to_user_id,lang,possibly_sensitive,public_metrics,referenced_tweets,reply_settings,source,withheld",
-		start_time: "2022-01-02T12:59:00Z",
-		max_results: 100, */
 	},
 };
 

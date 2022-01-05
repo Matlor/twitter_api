@@ -11,17 +11,21 @@ hashtag ICP is 2800
 ICP as keyword is 9793
 I could do the keyword
 
+Problem: From the unique ones I could not fetch all of them. About 30 were lost
+- I have to do data validation
+
 
 NEXT STEPS:
-- include as many user.fields as possible
-- as many tweet fiels as possible
-1) set for as much data as possible -> search done
-1.1) delete all the data I have now in the files
-1.2) check if lookups cost api credits
 
-2) perfor a large search for tweets
-3) Check if the neweset 30% of tweets are mostly doubles or not - this I could use to determine how much I should crawl
-4) run into the rate limits on purpose
+2) test when the loading of the array becomes a problem
+
+3) Update the data by a new search! Think through how much a month would take if done continously!
+- but of course sample would be enough if the new tweets are all from old user (to large extend)
+
+4) I have to have the follower relationship otherwise it is useless
+
+
+5) run into the rate limits on purpose
 
 
 
@@ -64,11 +68,11 @@ const getTweets = async () => {
 
 // ---------------
 
-const writeToFile = (content) => {
-	if (fs.readFileSync("./data.json").length === 0) {
-		fs.writeFileSync("./data.json", JSON.stringify([]), "utf8");
-	}
+if (fs.readFileSync("./data.json").length === 0) {
+	fs.writeFileSync("./data.json", JSON.stringify([]), "utf8");
+}
 
+const writeToFile = (content) => {
 	const file = fs.readFileSync("./data.json");
 
 	let tweets = JSON.parse(file);

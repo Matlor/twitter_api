@@ -17,7 +17,6 @@ const options = {
 		authorization: `Bearer ${bearer_token}`,
 	},
 	params: {
-		ids: "1352732279307722754",
 		"user.fields":
 			"created_at,description,entities,id,location,name,pinned_tweet_id,profile_image_url,protected,public_metrics,url,username,verified,withheld",
 	},
@@ -59,10 +58,11 @@ const writeToFile = (content) => {
 let partOfAuthors = [];
 
 // max 100 is allowed
-let delta = 10;
+let delta = 100;
 let i = 0;
 
 let interval = setInterval(async () => {
+	console.log(i);
 	i += delta;
 	if (i >= uniqueAuthors.length + 10) {
 		clearInterval(interval);
