@@ -1,6 +1,4 @@
 const fs = require("fs");
-console.log("ee");
-
 const path = require("path");
 const file = fs.readFileSync(path.resolve(__dirname, "../data.json"));
 const tweets = JSON.parse(file);

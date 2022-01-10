@@ -1,4 +1,35 @@
 /* 
+
+/* 
+
+------ Doing -------
+
+Problem: From the unique ones I could not fetch all of them. About 30 were lost
+- I have to do data validation
+
+
+NEXT STEPS:
+
+2) test when the loading of the array becomes a problem
+
+3) Update the data by a new search! Think through how much a month would take if done continously!
+- but of course sample would be enough if the new tweets are all from old user (to large extend)
+
+4) I have to have the follower relationship otherwise it is useless
+
+
+5) run into the rate limits on purpose
+
+
+
+Later)
+- followers/friend -> when elevated access
+- then check their mutual followers
+- check if token_next is really null at some point -> yes it seems to the script stopped
+
+
+
+
 ------ Project Plan -------
 
 - For the same Search Criteria -
